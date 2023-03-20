@@ -5,7 +5,7 @@ const mongoURI = "mongodb+srv://rahulgoyal9418:rahulgoel@cluster0.atlnfor.mongod
 const connectToMongo = () => {
     
     mongoose.set("strictQuery", false);
-    mongoose.connect(mongoURI, ()=>{
+    mongoose.connect(process.env.mongoURI, ()=>{
         console.log("Hello! Connected to Mongo");
     })
 
